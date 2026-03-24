@@ -38,7 +38,7 @@ export async function getAIResponse(messages: Message[]) {
   console.log('Sending messages to OpenRouter:', messages);
   const openRouter = new OpenRouter({
     apiKey:
-      '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' // This should not be available for client side, it should be stored securely in the backend and accessed via an API route. This is just for demonstration purposes.
+      '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' // This should not be available for client side, it should be stored securely in the backend and accessed via an API route. This is just for demonstration purposes.
   });
   const completion = await openRouter.chat.send({
     chatGenerationParams: {

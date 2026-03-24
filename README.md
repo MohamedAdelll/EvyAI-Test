@@ -1,14 +1,14 @@
-# EvyAI Test
+# __ Test
 
 This repository contains two related projects:
 
 - `app/`: React + Vite + TypeScript web app
-- `extension/`: WXT browser extension for EvyAI
+- `extension/`: WXT browser extension for __
 
 ## Project Structure
 
 ```text
-EvyAI Test/
+__ Test/
 ├─ app/
 └─ extension/
 ```

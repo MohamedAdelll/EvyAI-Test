@@ -237,27 +237,27 @@ function App() {
               <div
                 className={`mb-4 rounded-lg border p-3 ${
                   state.isPaymentRequired
-                    ? 'border-evy-yellow bg-yellow-50'
+                    ? 'border-_-yellow bg-yellow-50'
                     : 'border-danger bg-red-50'
                 }`}
               >
                 <p
                   className={`text-sm font-medium ${
-                    state.isPaymentRequired ? 'text-evy-yellow' : 'text-danger'
+                    state.isPaymentRequired ? 'text-_-yellow' : 'text-danger'
                   }`}
                 >
                   {state.isPaymentRequired ? 'Upgrade Required' : 'Error'}
                 </p>
                 <p
                   className={`mt-1 text-sm ${
-                    state.isPaymentRequired ? 'text-evy-yellow' : 'text-danger'
+                    state.isPaymentRequired ? 'text-_-yellow' : 'text-danger'
                   }`}
                 >
                   {state.error}
                 </p>
               </div>
               <div>
-                <p className="text-evy-yellow mb-3 text-xs">
+                <p className="text-_-yellow mb-3 text-xs">
                   Relevant data collected for POC
                 </p>
                 <code className="text-xs">{JSON.stringify(state.context)}</code>
@@ -286,7 +286,7 @@ function App() {
                   : 'Generated Response'}
               </p>
               {state.isPaymentRequired && (
-                <p className="text-evy-yellow mb-3 text-xs">
+                <p className="text-_-yellow mb-3 text-xs">
                   Using lorem ipsum placeholder for demonstration
                 </p>
               )}

@@ -32,8 +32,8 @@ export default {
           disabled: 'var(--color-input-bg-disabled)'
         },
 
-        'evy-yellow': 'var(--color-evy-yellow-80)',
-        'evy-pink': 'var(--color-evy-pink-80)',
+        '_-yellow': 'var(--color-_-yellow-80)',
+        '_-pink': 'var(--color-_-pink-80)',
 
         'typography-primary': 'var(--color-typography-primary)',
         'typography-primary-light': 'var(--color-typography-primary-light)',

@@ -1,6 +1,6 @@
 {
-  "name": "evyAI - AI Assistant for Social Media",
-  "description": "evyAI is an AI Assistant that creates personalized comments, posts, and replies.",
+  "name": "_AI - AI Assistant for Social Media",
+  "description": "_AI is an AI Assistant that creates personalized comments, posts, and replies.",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnvyAI Test</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./main.ts"></script>
+
+    <!-- Customize the manifest options -->
+    <!-- <meta
+      name="manifest.default_icon"
+      content="{
+        64: '/64.png',
+        128: '/128.png',
+        256: '/256.png',
+        512: '/512.png',
+      }"
+    /> -->
+    <!-- Set include/exclude if the page should be removed from some builds -->
+    <!-- <meta name="manifest.include" content="['chrome', ...]" />
+    <meta name="manifest.exclude" content="['chrome', ...]" /> -->
+  </head>
+  <body>
+    <iframe
+      allow="microphone; clipboard-read; clipboard-write"
+      src="http://localhost:5173"
+      frameborder="0"
+    ></iframe>
+  </body>
+</html>

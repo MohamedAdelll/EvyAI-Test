@@ -6,11 +6,12 @@ export default {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
-        'primary-dark': 'var(--color-primary-dark)',
+        'primary-dark': 'rgb(var(--color-primary-dark) / <alpha-value>)',
         'primary-background': 'var(--color-primary-background)',
         'primary-foreground': 'var(--color-primary-foreground)',
-        'primary-border': 'var(--color-primary-border)',
-        'primary-border-hover': 'var(--color-primary-border-hover)',
+        'primary-border': 'rgb(var(--color-primary-border) / <alpha-value>)',
+        'primary-border-hover': 'rgb(var(--color-primary-border-hover) / <alpha-value>)',
+        'input-border-focused': 'var(--color-input-border-focused)',
 
         accent: 'var(--color-accent)',
         'accent-foreground': 'var(--color-accent-foreground)',
@@ -40,7 +41,7 @@ export default {
         'typography-primary-lighter': 'var(--color-typography-primary-lighter)',
         'typography-primary-strong': 'var(--color-typography-primary-strong)',
         'typography-accent': 'var(--color-typography-accent)',
-        'typography-accent-strong': 'var(--color-typography-accent-strong)',
+        'typography-accent-strong': 'rgb(var(--color-typography-accent-strong) / <alpha-value>)',
 
         'btn-bg-primary': 'var(--color-btn-bg-primary)',
         'btn-border-primary': 'var(--color-btn-border-primary)',

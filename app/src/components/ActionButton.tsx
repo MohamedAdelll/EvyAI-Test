@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export default function ActionButton({
+export default function Button({
   children,
   props
 }: {

@@ -25,7 +25,7 @@ interface AppState {
   context: Message[] | null;
 }
 
-function SidePanelApp() {
+function App() {
   const [state, setState] = useState<AppState>({
     activity: null,
     generatedText: null,
@@ -397,4 +397,4 @@ function SidePanelApp() {
   );
 }
 
-export default SidePanelApp;
+export default App;

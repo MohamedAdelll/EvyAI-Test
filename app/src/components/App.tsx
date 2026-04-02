@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import Flag from 'assets/UI/flag.svg?react';
-import Persona from 'assets/UI/persona.svg?react';
-import Terminal from 'assets/UI/terminal.svg?react';
-import Tone from 'assets/UI/tone.svg?react';
 import {
   buildCommentMessages,
   buildDMMessages,
@@ -13,9 +9,9 @@ import { selectors } from 'utils/selectors';
 
 import { Message } from '@openrouter/sdk/models';
 
-import Card from './Card';
-import PromptSuggestion from './PromptSuggestion';
-import TextArea from './TextArea';
+import AppHeader from './Header';
+import PromptComposer from './PromptComposer';
+import WelcomeSection from './WelcomeSection';
 
 interface AppState {
   activity: string | null;
@@ -29,7 +25,7 @@ interface AppState {
   context: Message[] | null;
 }
 
-function App() {
+function SidePanelApp() {
   const [state, setState] = useState<AppState>({
     activity: null,
     generatedText: null,
@@ -225,41 +221,10 @@ function App() {
 
   return (
     <div className="h-dvh flex flex-col">
-      <header className="sticky top-0 bg-white border-b border-primary-border">
-        <h1 className="p-3 text-size-base font-black leading-tight">
-          AI Writer
-        </h1>
-      </header>
+      <AppHeader />
       <div className="p-3 pb-0 flex flex-col grow">
-        <article className="grid grid-cols-2 gap-1 mb-4">
-          <Card Icon={Flag} children="Goal" />
-          <Card Icon={Tone} children="Tone" />
-          <Card Icon={Persona} children="Persona" />
-          <Card Icon={Terminal} children="Select Style" />
-        </article>
-        <main className="grow flex flex-col items-center justify-center mb-1 lg:mb-6 overflow-auto">
-          <div>
-            <h4 className="text-3xl lg:text-4xl font-black">Welcome!</h4>
-            <p className="text-xs lg:text-base font-medium mb-4 lg:mb-6">
-              How can we help you engage today?
-            </p>
-            <div className="flex flex-col gap-2 lg:gap-3">
-              <PromptSuggestion>
-                Create a personalized Linkedin message to reconnect with a past
-                client.
-              </PromptSuggestion>
-              <PromptSuggestion>
-                Write a follow-up message after a sales demo to keep the
-                conversation going.
-              </PromptSuggestion>
-              <PromptSuggestion>
-                Create a personalized Linkedin message to reconnect with a past
-                client.
-              </PromptSuggestion>
-            </div>
-          </div>
-        </main>
-        <TextArea />
+        <WelcomeSection />
+        <PromptComposer />
       </div>
     </div>
 
@@ -432,4 +397,4 @@ function App() {
   );
 }
 
-export default App;
+export default SidePanelApp;

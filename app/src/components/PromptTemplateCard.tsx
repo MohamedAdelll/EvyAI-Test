@@ -1,4 +1,4 @@
-export default function PromptSuggestion({
+export default function PromptTemplateCard({
   children
 }: {
   children: React.ReactNode;

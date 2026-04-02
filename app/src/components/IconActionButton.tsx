@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export default function IconWrapper({
+export default function IconActionButton({
   Icon,
   wrapperProps,
   iconProps

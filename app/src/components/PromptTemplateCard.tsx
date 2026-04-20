@@ -1,10 +1,15 @@
 export default function PromptTemplateCard({
-  children
+  children,
+  onClick
 }: {
   children: React.ReactNode;
+  onClick: () => void;
 }) {
   return (
-    <div className="w-full p-2 rounded-lg font-semibold text-[10px] text-typography-accent-strong bg-primary-background border border-card-border cursor-pointer hover:bg-primary-dark/10 transition lg:text-sm">
+    <div
+      onClick={onClick}
+      className="text-typography-accent-strong bg-primary-background border-card-border hover:bg-primary-dark/10 w-full cursor-pointer rounded-lg border p-2 text-[10px] font-semibold transition lg:text-sm"
+    >
       {children}
     </div>
   );

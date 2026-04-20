@@ -39,6 +39,7 @@
     --container-5xl: 1024px;
 
     /* typography (px ONLY) */
+    --text-2xs: 10px;
     --text-xs: 12px;
     --text-sm: 14px;
     --text-base: 16px;

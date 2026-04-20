@@ -42,10 +42,11 @@ export default {
         'typography-primary-strong': 'var(--color-typography-primary-strong)',
         'typography-accent': 'var(--color-typography-accent)',
         'typography-accent-strong': 'rgb(var(--color-typography-accent-strong) / <alpha-value>)',
+        'typography-stale': 'var(--color-typography-stale)',
 
-        'btn-bg-primary': 'var(--color-btn-bg-primary)',
+        'btn-bg-primary': 'rgb(var(--color-btn-bg-primary) / <alpha-value>)',
         'btn-border-primary': 'var(--color-btn-border-primary)',
-        'btn-text-primary': 'var(--color-btn-text-primary)',
+        'btn-text-primary': 'rgb(var(--color-btn-text-primary) / <alpha-value>)',
       },
 
       spacing: {
@@ -69,6 +70,7 @@ export default {
       },
 
       fontSize: {
+        '2xs': 'var(--text-2xs)',
         xs: 'var(--text-xs)',
         sm: 'var(--text-sm)',
         base: 'var(--text-base)',

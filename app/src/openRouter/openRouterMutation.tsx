@@ -1,16 +1,16 @@
-import {
-  CommentData,
-  DMData
-} from 'utils/selectors';
+import { CommentData, DMData } from 'utils/selectors';
 
 import { OpenRouter } from '@openrouter/sdk';
 import { Message } from '@openrouter/sdk/models';
 
-export function buildCommentMessages(data: CommentData): Message[] {
+export function buildCommentMessages(
+  prompt: string,
+  data: CommentData
+): Message[] {
   return [
     {
       role: 'system',
-      content: data.prompt
+      content: `${prompt}\n\n${data.prompt}`
     },
     {
       role: 'user',
@@ -19,11 +19,11 @@ export function buildCommentMessages(data: CommentData): Message[] {
   ];
 }
 
-export function buildDMMessages(data: DMData): Message[] {
+export function buildDMMessages(prompt: string, data: DMData): Message[] {
   return [
     {
       role: 'system',
-      content: data.prompt
+      content: `${prompt}\n\n${data.prompt}`
     },
     ...data.messages.map((m) => {
       return {
@@ -38,7 +38,7 @@ export async function getAIResponse(messages: Message[]) {
   console.log('Sending messages to OpenRouter:', messages);
   const openRouter = new OpenRouter({
     apiKey:
-      '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' // This should not be available for client side, it should be stored securely in the backend and accessed via an API route. This is just for demonstration purposes.
+      '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' // This should not be available for client side, it should be stored securely in the backend and accessed via an API route. This is just for demonstration purposes.
   });
   const completion = await openRouter.chat.send({
     chatGenerationParams: {

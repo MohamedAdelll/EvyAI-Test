@@ -19,6 +19,7 @@ export const selectors = [
       const postAuthor =
         post?.querySelector(this.postAuthorSelector)?.textContent?.trim() ||
         'unknown';
+      console.log('Extracted post text for reply:', { postText, postAuthor });
       return {
         postText,
         postAuthor,
@@ -46,6 +47,7 @@ export const selectors = [
       const postAuthor =
         post?.querySelector(this.postAuthorSelector)?.textContent?.trim() ||
         'unknown';
+      console.log('Extracted post text:', { postText, postAuthor });
       return {
         postText,
         postAuthor,
@@ -61,6 +63,7 @@ export const selectors = [
     messageTextSelector: '.msg-s-event-listitem__body',
     messageSenderNameSelector: '.msg-s-message-group__profile-link',
     logic(el: HTMLElement): boolean {
+      console.log('Checking DM selector for element', el);
       return !!el.closest(this.directMessageSelector);
     },
     activity: 'Direct Message' as const,
@@ -78,6 +81,7 @@ export const selectors = [
             ?.textContent?.trim() || 'unknown';
         return { text, sender };
       });
+      console.log('Extracted messages:', messages);
       return {
         messages,
         prompt:
